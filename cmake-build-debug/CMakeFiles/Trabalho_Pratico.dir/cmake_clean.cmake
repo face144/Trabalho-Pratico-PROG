@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.obj"
   "CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.obj"
   "CMakeFiles/Trabalho_Pratico.dir/main.c.obj"
+  "CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.obj"
   "Trabalho_Pratico.exe"
   "Trabalho_Pratico.exe.manifest"
   "Trabalho_Pratico.pdb"

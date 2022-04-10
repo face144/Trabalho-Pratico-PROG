@@ -200,6 +200,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/main.c.s
 .PHONY : main.c.s
 
+tabuleiro.obj: tabuleiro.c.obj
+.PHONY : tabuleiro.obj
+
+# target to build an object file
+tabuleiro.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.obj
+.PHONY : tabuleiro.c.obj
+
+tabuleiro.i: tabuleiro.c.i
+.PHONY : tabuleiro.i
+
+# target to preprocess a source file
+tabuleiro.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.i
+.PHONY : tabuleiro.c.i
+
+tabuleiro.s: tabuleiro.c.s
+.PHONY : tabuleiro.s
+
+# target to generate assembly for a file
+tabuleiro.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.s
+.PHONY : tabuleiro.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -218,6 +242,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... tabuleiro.obj
+	@echo ... tabuleiro.i
+	@echo ... tabuleiro.s
 .PHONY : help
 
 

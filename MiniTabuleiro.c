@@ -16,3 +16,8 @@ void InserePeca(unsigned jogador, MiniTabuleiro* mini_tabuleiro, unsigned x, uns
         mini_tabuleiro->mini_casa[TAM_SIDE * _y * _x].peca = PECA_P2;
     }
 }
+
+void MostraFilaMiniTabuleiro(MiniTabuleiro* mini_tabuleiro) {
+    for (int i = 0; i < TAM_SIDE; ++i)
+        MostraMiniCasa(&mini_tabuleiro->mini_casa[i]);
+}

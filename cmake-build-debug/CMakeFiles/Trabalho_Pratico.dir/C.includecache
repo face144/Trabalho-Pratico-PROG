@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniCasa.h
+common.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h
+stdio.h
+-
+
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniTabuleiro.h
+common.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h
+MiniCasa.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniCasa.h
+
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h
+
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/tabuleiro.c
+tabuleiro.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/tabuleiro.h
+
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/tabuleiro.h
+common.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h
+MiniTabuleiro.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniTabuleiro.h
+stdlib.h
+-
+

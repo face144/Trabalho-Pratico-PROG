@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniCasa.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.obj"
   "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniTabuleiro.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.obj"
   "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/main.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/main.c.obj"
+  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/tabuleiro.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

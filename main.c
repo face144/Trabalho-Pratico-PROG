@@ -1,6 +1,9 @@
-#include <stdio.h>
+#include "tabuleiro.h"
 
 int main() {
-    printf("Hello, World!\n");
+    Tabuleiro tabuleiro;
+    ResetTabuleiro(&tabuleiro);
+    MostraTabuleiro(&tabuleiro);
+
     return 0;
 }

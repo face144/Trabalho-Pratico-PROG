@@ -8,5 +8,7 @@
 #define TAM_SIDE 3
 #define P1 1
 #define P2 2
+#define BARRA "|"
+#define TETO "---"
 
 #endif //TRABALHO_PRATICO_COMMON_H

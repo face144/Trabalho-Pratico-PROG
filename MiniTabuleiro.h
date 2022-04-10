@@ -12,5 +12,6 @@ typedef struct MiniTabuleiro{
 
 void ResetMiniTabuleiro(MiniTabuleiro* mini_tabuleiro);
 void InserePeca(unsigned jogador, MiniTabuleiro* mini_tabuleiro, unsigned x, unsigned y);
+void MostraFilaMiniTabuleiro(MiniTabuleiro* mini_tabuleiro);
 
 #endif //TRABALHO_PRATICO_MINITABULEIRO_H
