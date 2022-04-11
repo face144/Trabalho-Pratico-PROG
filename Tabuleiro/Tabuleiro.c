@@ -52,3 +52,8 @@ void MostraTabuleiro(Tabuleiro* tabuleiro) {
     }
     printf("\n");
 }
+
+unsigned TabVerificaVitoria(Tabuleiro* tabuleiro) {
+    // Todo: Completar função
+    // MiniTabVerificaVitoria(tabuleiro->mini_tabuleiro);
+}
