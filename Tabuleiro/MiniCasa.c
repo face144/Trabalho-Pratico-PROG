@@ -8,15 +8,15 @@ void MostraMiniCasa(MiniCasa* mini_casa) {
     switch (mini_casa->peca) {
 
         case PECA_VAZIA:
-            printf(" ");
+            printf(STR_PECA_VAZIA);
             break;
 
         case PECA_P1:
-            printf("X");
+            printf(STR_PECA_P1);
             break;
 
         case PECA_P2:
-            printf("O");
+            printf(STR_PECA_P2);
             break;
     }
 }

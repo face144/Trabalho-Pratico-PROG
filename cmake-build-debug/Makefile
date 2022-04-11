@@ -128,53 +128,125 @@ Trabalho_Pratico/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/build
 .PHONY : Trabalho_Pratico/fast
 
-MiniCasa.obj: MiniCasa.c.obj
-.PHONY : MiniCasa.obj
+Jogador/Jogador.obj: Jogador/Jogador.c.obj
+.PHONY : Jogador/Jogador.obj
 
 # target to build an object file
-MiniCasa.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.obj
-.PHONY : MiniCasa.c.obj
+Jogador/Jogador.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.obj
+.PHONY : Jogador/Jogador.c.obj
 
-MiniCasa.i: MiniCasa.c.i
-.PHONY : MiniCasa.i
+Jogador/Jogador.i: Jogador/Jogador.c.i
+.PHONY : Jogador/Jogador.i
 
 # target to preprocess a source file
-MiniCasa.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.i
-.PHONY : MiniCasa.c.i
+Jogador/Jogador.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.i
+.PHONY : Jogador/Jogador.c.i
 
-MiniCasa.s: MiniCasa.c.s
-.PHONY : MiniCasa.s
+Jogador/Jogador.s: Jogador/Jogador.c.s
+.PHONY : Jogador/Jogador.s
 
 # target to generate assembly for a file
-MiniCasa.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.s
-.PHONY : MiniCasa.c.s
+Jogador/Jogador.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.s
+.PHONY : Jogador/Jogador.c.s
 
-MiniTabuleiro.obj: MiniTabuleiro.c.obj
-.PHONY : MiniTabuleiro.obj
+Jogo/Jogo.obj: Jogo/Jogo.c.obj
+.PHONY : Jogo/Jogo.obj
 
 # target to build an object file
-MiniTabuleiro.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.obj
-.PHONY : MiniTabuleiro.c.obj
+Jogo/Jogo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.obj
+.PHONY : Jogo/Jogo.c.obj
 
-MiniTabuleiro.i: MiniTabuleiro.c.i
-.PHONY : MiniTabuleiro.i
+Jogo/Jogo.i: Jogo/Jogo.c.i
+.PHONY : Jogo/Jogo.i
 
 # target to preprocess a source file
-MiniTabuleiro.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.i
-.PHONY : MiniTabuleiro.c.i
+Jogo/Jogo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.i
+.PHONY : Jogo/Jogo.c.i
 
-MiniTabuleiro.s: MiniTabuleiro.c.s
-.PHONY : MiniTabuleiro.s
+Jogo/Jogo.s: Jogo/Jogo.c.s
+.PHONY : Jogo/Jogo.s
 
 # target to generate assembly for a file
-MiniTabuleiro.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.s
-.PHONY : MiniTabuleiro.c.s
+Jogo/Jogo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.s
+.PHONY : Jogo/Jogo.c.s
+
+Tabuleiro/MiniCasa.obj: Tabuleiro/MiniCasa.c.obj
+.PHONY : Tabuleiro/MiniCasa.obj
+
+# target to build an object file
+Tabuleiro/MiniCasa.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj
+.PHONY : Tabuleiro/MiniCasa.c.obj
+
+Tabuleiro/MiniCasa.i: Tabuleiro/MiniCasa.c.i
+.PHONY : Tabuleiro/MiniCasa.i
+
+# target to preprocess a source file
+Tabuleiro/MiniCasa.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.i
+.PHONY : Tabuleiro/MiniCasa.c.i
+
+Tabuleiro/MiniCasa.s: Tabuleiro/MiniCasa.c.s
+.PHONY : Tabuleiro/MiniCasa.s
+
+# target to generate assembly for a file
+Tabuleiro/MiniCasa.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.s
+.PHONY : Tabuleiro/MiniCasa.c.s
+
+Tabuleiro/MiniTabuleiro.obj: Tabuleiro/MiniTabuleiro.c.obj
+.PHONY : Tabuleiro/MiniTabuleiro.obj
+
+# target to build an object file
+Tabuleiro/MiniTabuleiro.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj
+.PHONY : Tabuleiro/MiniTabuleiro.c.obj
+
+Tabuleiro/MiniTabuleiro.i: Tabuleiro/MiniTabuleiro.c.i
+.PHONY : Tabuleiro/MiniTabuleiro.i
+
+# target to preprocess a source file
+Tabuleiro/MiniTabuleiro.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.i
+.PHONY : Tabuleiro/MiniTabuleiro.c.i
+
+Tabuleiro/MiniTabuleiro.s: Tabuleiro/MiniTabuleiro.c.s
+.PHONY : Tabuleiro/MiniTabuleiro.s
+
+# target to generate assembly for a file
+Tabuleiro/MiniTabuleiro.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.s
+.PHONY : Tabuleiro/MiniTabuleiro.c.s
+
+Tabuleiro/Tabuleiro.obj: Tabuleiro/Tabuleiro.c.obj
+.PHONY : Tabuleiro/Tabuleiro.obj
+
+# target to build an object file
+Tabuleiro/Tabuleiro.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj
+.PHONY : Tabuleiro/Tabuleiro.c.obj
+
+Tabuleiro/Tabuleiro.i: Tabuleiro/Tabuleiro.c.i
+.PHONY : Tabuleiro/Tabuleiro.i
+
+# target to preprocess a source file
+Tabuleiro/Tabuleiro.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.i
+.PHONY : Tabuleiro/Tabuleiro.c.i
+
+Tabuleiro/Tabuleiro.s: Tabuleiro/Tabuleiro.c.s
+.PHONY : Tabuleiro/Tabuleiro.s
+
+# target to generate assembly for a file
+Tabuleiro/Tabuleiro.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.s
+.PHONY : Tabuleiro/Tabuleiro.c.s
 
 main.obj: main.c.obj
 .PHONY : main.obj
@@ -200,30 +272,6 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/main.c.s
 .PHONY : main.c.s
 
-tabuleiro.obj: tabuleiro.c.obj
-.PHONY : tabuleiro.obj
-
-# target to build an object file
-tabuleiro.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.obj
-.PHONY : tabuleiro.c.obj
-
-tabuleiro.i: tabuleiro.c.i
-.PHONY : tabuleiro.i
-
-# target to preprocess a source file
-tabuleiro.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.i
-.PHONY : tabuleiro.c.i
-
-tabuleiro.s: tabuleiro.c.s
-.PHONY : tabuleiro.s
-
-# target to generate assembly for a file
-tabuleiro.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.s
-.PHONY : tabuleiro.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -233,18 +281,24 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Trabalho_Pratico
-	@echo ... MiniCasa.obj
-	@echo ... MiniCasa.i
-	@echo ... MiniCasa.s
-	@echo ... MiniTabuleiro.obj
-	@echo ... MiniTabuleiro.i
-	@echo ... MiniTabuleiro.s
+	@echo ... Jogador/Jogador.obj
+	@echo ... Jogador/Jogador.i
+	@echo ... Jogador/Jogador.s
+	@echo ... Jogo/Jogo.obj
+	@echo ... Jogo/Jogo.i
+	@echo ... Jogo/Jogo.s
+	@echo ... Tabuleiro/MiniCasa.obj
+	@echo ... Tabuleiro/MiniCasa.i
+	@echo ... Tabuleiro/MiniCasa.s
+	@echo ... Tabuleiro/MiniTabuleiro.obj
+	@echo ... Tabuleiro/MiniTabuleiro.i
+	@echo ... Tabuleiro/MiniTabuleiro.s
+	@echo ... Tabuleiro/Tabuleiro.obj
+	@echo ... Tabuleiro/Tabuleiro.i
+	@echo ... Tabuleiro/Tabuleiro.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... tabuleiro.obj
-	@echo ... tabuleiro.i
-	@echo ... tabuleiro.s
 .PHONY : help
 
 

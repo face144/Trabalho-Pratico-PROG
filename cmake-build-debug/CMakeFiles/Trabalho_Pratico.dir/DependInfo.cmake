@@ -8,10 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniCasa.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.obj"
-  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniTabuleiro.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.obj"
+  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogador/Jogador.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.obj"
+  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogo/Jogo.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.obj"
+  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniCasa.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj"
+  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniTabuleiro.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj"
+  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/Tabuleiro.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj"
   "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/main.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/main.c.obj"
-  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/tabuleiro.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

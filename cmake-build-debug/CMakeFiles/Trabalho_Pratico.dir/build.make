@@ -78,64 +78,94 @@ CMakeFiles/Trabalho_Pratico.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Trabalho_Pratico.dir/main.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\main.c -o CMakeFiles\Trabalho_Pratico.dir\main.c.s
 
-CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.obj: CMakeFiles/Trabalho_Pratico.dir/flags.make
-CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.obj: ../MiniTabuleiro.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Trabalho_Pratico.dir\MiniTabuleiro.c.obj -c C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\MiniTabuleiro.c
+CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj: CMakeFiles/Trabalho_Pratico.dir/flags.make
+CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj: ../Tabuleiro/MiniTabuleiro.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Trabalho_Pratico.dir\Tabuleiro\MiniTabuleiro.c.obj -c C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Tabuleiro\MiniTabuleiro.c
 
-CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\MiniTabuleiro.c > CMakeFiles\Trabalho_Pratico.dir\MiniTabuleiro.c.i
+CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Tabuleiro\MiniTabuleiro.c > CMakeFiles\Trabalho_Pratico.dir\Tabuleiro\MiniTabuleiro.c.i
 
-CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\MiniTabuleiro.c -o CMakeFiles\Trabalho_Pratico.dir\MiniTabuleiro.c.s
+CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Tabuleiro\MiniTabuleiro.c -o CMakeFiles\Trabalho_Pratico.dir\Tabuleiro\MiniTabuleiro.c.s
 
-CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.obj: CMakeFiles/Trabalho_Pratico.dir/flags.make
-CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.obj: ../MiniCasa.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Trabalho_Pratico.dir\MiniCasa.c.obj -c C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\MiniCasa.c
+CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj: CMakeFiles/Trabalho_Pratico.dir/flags.make
+CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj: ../Tabuleiro/MiniCasa.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Trabalho_Pratico.dir\Tabuleiro\MiniCasa.c.obj -c C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Tabuleiro\MiniCasa.c
 
-CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\MiniCasa.c > CMakeFiles\Trabalho_Pratico.dir\MiniCasa.c.i
+CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Tabuleiro\MiniCasa.c > CMakeFiles\Trabalho_Pratico.dir\Tabuleiro\MiniCasa.c.i
 
-CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\MiniCasa.c -o CMakeFiles\Trabalho_Pratico.dir\MiniCasa.c.s
+CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Tabuleiro\MiniCasa.c -o CMakeFiles\Trabalho_Pratico.dir\Tabuleiro\MiniCasa.c.s
 
-CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.obj: CMakeFiles/Trabalho_Pratico.dir/flags.make
-CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.obj: ../tabuleiro.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Trabalho_Pratico.dir\tabuleiro.c.obj -c C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\tabuleiro.c
+CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj: CMakeFiles/Trabalho_Pratico.dir/flags.make
+CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj: ../Tabuleiro/Tabuleiro.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Trabalho_Pratico.dir\Tabuleiro\Tabuleiro.c.obj -c C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Tabuleiro\Tabuleiro.c
 
-CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\tabuleiro.c > CMakeFiles\Trabalho_Pratico.dir\tabuleiro.c.i
+CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Tabuleiro\Tabuleiro.c > CMakeFiles\Trabalho_Pratico.dir\Tabuleiro\Tabuleiro.c.i
 
-CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\tabuleiro.c -o CMakeFiles\Trabalho_Pratico.dir\tabuleiro.c.s
+CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Tabuleiro\Tabuleiro.c -o CMakeFiles\Trabalho_Pratico.dir\Tabuleiro\Tabuleiro.c.s
+
+CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.obj: CMakeFiles/Trabalho_Pratico.dir/flags.make
+CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.obj: ../Jogador/Jogador.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Trabalho_Pratico.dir\Jogador\Jogador.c.obj -c C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Jogador\Jogador.c
+
+CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Jogador\Jogador.c > CMakeFiles\Trabalho_Pratico.dir\Jogador\Jogador.c.i
+
+CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Jogador\Jogador.c -o CMakeFiles\Trabalho_Pratico.dir\Jogador\Jogador.c.s
+
+CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.obj: CMakeFiles/Trabalho_Pratico.dir/flags.make
+CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.obj: ../Jogo/Jogo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Trabalho_Pratico.dir\Jogo\Jogo.c.obj -c C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Jogo\Jogo.c
+
+CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Jogo\Jogo.c > CMakeFiles\Trabalho_Pratico.dir\Jogo\Jogo.c.i
+
+CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\Jogo\Jogo.c -o CMakeFiles\Trabalho_Pratico.dir\Jogo\Jogo.c.s
 
 # Object files for target Trabalho_Pratico
 Trabalho_Pratico_OBJECTS = \
 "CMakeFiles/Trabalho_Pratico.dir/main.c.obj" \
-"CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.obj" \
-"CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.obj" \
-"CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.obj"
+"CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj" \
+"CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj" \
+"CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj" \
+"CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.obj" \
+"CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.obj"
 
 # External object files for target Trabalho_Pratico
 Trabalho_Pratico_EXTERNAL_OBJECTS =
 
 Trabalho_Pratico.exe: CMakeFiles/Trabalho_Pratico.dir/main.c.obj
-Trabalho_Pratico.exe: CMakeFiles/Trabalho_Pratico.dir/MiniTabuleiro.c.obj
-Trabalho_Pratico.exe: CMakeFiles/Trabalho_Pratico.dir/MiniCasa.c.obj
-Trabalho_Pratico.exe: CMakeFiles/Trabalho_Pratico.dir/tabuleiro.c.obj
+Trabalho_Pratico.exe: CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj
+Trabalho_Pratico.exe: CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj
+Trabalho_Pratico.exe: CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj
+Trabalho_Pratico.exe: CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.obj
+Trabalho_Pratico.exe: CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.obj
 Trabalho_Pratico.exe: CMakeFiles/Trabalho_Pratico.dir/build.make
 Trabalho_Pratico.exe: CMakeFiles/Trabalho_Pratico.dir/linklibs.rsp
 Trabalho_Pratico.exe: CMakeFiles/Trabalho_Pratico.dir/objects1.rsp
 Trabalho_Pratico.exe: CMakeFiles/Trabalho_Pratico.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Trabalho_Pratico.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\jedua\Documents\ISEC-EI\1o_Ano\P\Trabalho-Pratico\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable Trabalho_Pratico.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Trabalho_Pratico.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

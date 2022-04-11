@@ -6,29 +6,45 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniCasa.h
-common.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogador/Jogador.h
+../common.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h
+
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogo/Jogo.c
+Jogo.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogo/Jogo.h
+
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogo/Jogo.h
+../Jogador/Jogador.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogador/Jogador.h
+../Tabuleiro/Tabuleiro.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/Tabuleiro.h
+../common.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h
+
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniCasa.h
+../common.h
 C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h
 stdio.h
 -
 
-C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniTabuleiro.h
-common.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniTabuleiro.h
+../common.h
 C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h
 MiniCasa.h
-C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniCasa.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniCasa.h
 
-C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h
-
-C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/tabuleiro.c
-tabuleiro.h
-C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/tabuleiro.h
-
-C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/tabuleiro.h
-common.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/Tabuleiro.h
+../common.h
 C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h
 MiniTabuleiro.h
-C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniTabuleiro.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniTabuleiro.h
 stdlib.h
 -
+
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h
+
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/main.c
+Jogo/Jogo.h
+C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogo/Jogo.h
 

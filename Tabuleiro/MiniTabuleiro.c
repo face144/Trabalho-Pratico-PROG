@@ -17,7 +17,26 @@ void InserePeca(unsigned jogador, MiniTabuleiro* mini_tabuleiro, unsigned x, uns
     }
 }
 
-void MostraFilaMiniTabuleiro(MiniTabuleiro* mini_tabuleiro) {
-    for (int i = 0; i < TAM_SIDE; ++i)
+void MostraFilaMiniTabuleiro(MiniTabuleiro* mini_tabuleiro, unsigned fila) {
+    int i;
+    switch (fila) {
+        case 1:
+            i = 0;
+            break;
+
+        case 2:
+            i = 3;
+            break;
+
+        case 3:
+            i = 6;
+            break;
+
+        default:
+            i = 0;
+            break;
+    }
+    int diff = i;
+    for (; i < TAM_SIDE + diff; ++i)
         MostraMiniCasa(&mini_tabuleiro->mini_casa[i]);
 }

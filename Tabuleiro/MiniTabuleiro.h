@@ -1,6 +1,6 @@
 #ifndef TRABALHO_PRATICO_MINITABULEIRO_H
 #define TRABALHO_PRATICO_MINITABULEIRO_H
-#include "common.h"
+#include "../common.h"
 #include "MiniCasa.h"
 
 typedef struct MiniTabuleiro{
@@ -12,6 +12,6 @@ typedef struct MiniTabuleiro{
 
 void ResetMiniTabuleiro(MiniTabuleiro* mini_tabuleiro);
 void InserePeca(unsigned jogador, MiniTabuleiro* mini_tabuleiro, unsigned x, unsigned y);
-void MostraFilaMiniTabuleiro(MiniTabuleiro* mini_tabuleiro);
+void MostraFilaMiniTabuleiro(MiniTabuleiro* mini_tabuleiro, unsigned fila);
 
 #endif //TRABALHO_PRATICO_MINITABULEIRO_H

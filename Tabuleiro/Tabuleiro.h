@@ -1,6 +1,6 @@
 #ifndef TRABALHO_PRATICO_TABULEIRO_H
 #define TRABALHO_PRATICO_TABULEIRO_H
-#include "common.h"
+#include "../common.h"
 #include "MiniTabuleiro.h"
 #include <stdlib.h>
 

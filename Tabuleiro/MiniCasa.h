@@ -1,6 +1,6 @@
 #ifndef TRABALHO_PRATICO_MINICASA_H
 #define TRABALHO_PRATICO_MINICASA_H
-#include "common.h"
+#include "../common.h"
 #include <stdio.h>
 
 typedef struct MiniCasa {

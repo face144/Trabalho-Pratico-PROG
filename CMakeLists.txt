@@ -3,4 +3,4 @@ project(Trabalho_Pratico C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Trabalho_Pratico main.c MiniTabuleiro.c MiniTabuleiro.h MiniCasa.c MiniCasa.h common.h tabuleiro.c tabuleiro.h)
+add_executable(Trabalho_Pratico main.c Tabuleiro/MiniTabuleiro.c Tabuleiro/MiniTabuleiro.h Tabuleiro/MiniCasa.c Tabuleiro/MiniCasa.h common.h Tabuleiro/Tabuleiro.c Tabuleiro/Tabuleiro.h Jogador/Jogador.c Jogador/Jogador.h Jogo/Jogo.c Jogo/Jogo.h)

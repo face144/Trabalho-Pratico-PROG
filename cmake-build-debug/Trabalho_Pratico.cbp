@@ -76,28 +76,40 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniCasa.c">
+		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogador/Jogador.c">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniCasa.h">
+		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogador/Jogador.h">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniTabuleiro.c">
+		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogo/Jogo.c">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/MiniTabuleiro.h">
+		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogo/Jogo.h">
+			<Option target="Trabalho_Pratico"/>
+		</Unit>
+		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniCasa.c">
+			<Option target="Trabalho_Pratico"/>
+		</Unit>
+		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniCasa.h">
+			<Option target="Trabalho_Pratico"/>
+		</Unit>
+		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniTabuleiro.c">
+			<Option target="Trabalho_Pratico"/>
+		</Unit>
+		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniTabuleiro.h">
+			<Option target="Trabalho_Pratico"/>
+		</Unit>
+		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/Tabuleiro.c">
+			<Option target="Trabalho_Pratico"/>
+		</Unit>
+		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/Tabuleiro.h">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
 		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
 		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/main.c">
-			<Option target="Trabalho_Pratico"/>
-		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/tabuleiro.c">
-			<Option target="Trabalho_Pratico"/>
-		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/tabuleiro.h">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
 		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/CMakeLists.txt">

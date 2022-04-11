@@ -1,9 +1,12 @@
-#include "tabuleiro.h"
+#include "Jogo/Jogo.h"
 
 int main() {
-    Tabuleiro tabuleiro;
-    ResetTabuleiro(&tabuleiro);
-    MostraTabuleiro(&tabuleiro);
+    // TicTacToeUltimate()
 
+    // Testar as funçoes aquie faixa bor
+
+    Menu();
+
+    system("pause"); // Não tirare
     return 0;
 }
