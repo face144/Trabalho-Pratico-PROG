@@ -18,11 +18,13 @@ CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj: \
  ../Tabuleiro/MiniCasa.h \
  ../common.h
 CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj: \
+ ../Jogador/Jogador.h \
  ../Tabuleiro/MiniCasa.h \
  ../Tabuleiro/MiniTabuleiro.c \
  ../Tabuleiro/MiniTabuleiro.h \
  ../common.h
 CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj: \
+ ../Jogador/Jogador.h \
  ../Tabuleiro/MiniCasa.h \
  ../Tabuleiro/MiniTabuleiro.h \
  ../Tabuleiro/Tabuleiro.c \

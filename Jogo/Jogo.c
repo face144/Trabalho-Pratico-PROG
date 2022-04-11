@@ -48,7 +48,7 @@ void SalaJogo(unsigned bot) {
     InicializaJogadores(jogo.jogador, bot);
     ResetTabuleiro(&jogo.tabuleiro);
 
-    unsigned j = 0, x = 1, y = 1, mt;
+    unsigned j = 0, x = 1, y = 1, x_ant = 1, y_ant = 1;
     do {
         jogo.jogada.x = -1;
         jogo.jogada.y = -1;
@@ -60,10 +60,16 @@ void SalaJogo(unsigned bot) {
             if (bot == TRUE && j == 2) {
                 jogo.jogada = JogadaBOT(&jogo);
                 jogo.jogada.jogador = &jogo.jogador[j - 1];
-                jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[TAM_SIDE * (y - 1) + (x - 1)];
-            } else {
+                // Mini tabuleiro muda quer coordenadas estejam certas ou erradas
+                // o que leva a que se possa jogar no tabuleiro x100 y100
+                // Linha a baixo contem o código que muda o mini tabuleiro da jogada
                 jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[TAM_SIDE * (y - 1) + (x - 1)];
 
+            } else {
+                // Mini tabuleiro muda quer coordenadas estejam certas ou erradas
+                // o que leva a que se possa jogar no tabuleiro x100 y100
+                // Linha a baixo contem o código que muda o mini tabuleiro da jogada
+                jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[TAM_SIDE * (y - 1) + (x - 1)];
                 printf("Tabuleiro x%d y%d : Jogador %d ('x' 'y'): ", x, y, j);
                 scanf("%d %d",  &x, &y);
                 jogo.jogada.jogador = &jogo.jogador[j - 1];
@@ -72,7 +78,7 @@ void SalaJogo(unsigned bot) {
             }
         } while (Validacoes(&jogo.jogada) == FALSE);
         ModificaTabuleiro(&jogo.jogada);
-    } while (1 /*ValidaVitoria()*/);
+    } while (ValidaFimJogo(&jogo) == FALSE);
 }
 
 Jogada JogadaBOT(Jogo* jogo) {
@@ -113,6 +119,14 @@ void ModificaTabuleiro(Jogada* jogada) {
         jogada->mini_tabuleiro->mini_casa[TAM_SIDE * (jogada->y - 1) + (jogada->x - 1)].peca = PECA_P2;
 }
 
-unsigned ValidaVitoria(Tabuleiro* tabuleiro) {
+unsigned ValidaFimJogo(Jogo* jogo) {
+    if (TabVerificaVitoria(&jogo->tabuleiro) == TRUE) {
+        printf("Fim do jogo! Vencedor: Jogador %d\n", jogo->jogada.jogador->id);
+        return TRUE;
 
+    } else if (TabValidaEmpate(&jogo->tabuleiro) == TRUE) {
+        printf("Fim do jogo. Empate!");
+        return TRUE;
+    }
+    return FALSE;
 }
