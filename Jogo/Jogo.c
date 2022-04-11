@@ -37,7 +37,7 @@ void ProcecaEscolha(unsigned escolha) {
         case 3: // Carregar jogo (ficheiro binario)
             break;
 
-        case 4: // exit(0) duuh
+        default: // exit(0) duuh
             exit(0);
             break;
     }
@@ -48,37 +48,60 @@ void SalaJogo(unsigned bot) {
     InicializaJogadores(jogo.jogador, bot);
     ResetTabuleiro(&jogo.tabuleiro);
 
-    unsigned j = 0, x, y, mt;
+    unsigned j = 0, x = 1, y = 1, mt;
     do {
-        do {
-            MostraTabuleiro(&jogo.tabuleiro);
-            j++;
-            if (j % 2 == 0) j = 2; else j = 1;
+        jogo.jogada.x = -1;
+        jogo.jogada.y = -1;
+        MostraTabuleiro(&jogo.tabuleiro);
+        j++;
+        if (j % 2 == 0) j = 2; else j = 1;
 
-            // Remobere o mine tabuleire depois faixa bor
+        do {
             if (bot == TRUE && j == 2) {
-                // Jogada do bot
+                jogo.jogada = JogadaBOT(&jogo);
+                jogo.jogada.jogador = &jogo.jogador[j - 1];
+                jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[TAM_SIDE * (y - 1) + (x - 1)];
             } else {
-                printf("Jogador %d (formato: 'mini tabuleiro' 'x' 'y'): ", j);
-                scanf("%d %d %d", &mt, &x, &y);
+                jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[TAM_SIDE * (y - 1) + (x - 1)];
+
+                printf("Tabuleiro x%d y%d : Jogador %d ('x' 'y'): ", x, y, j);
+                scanf("%d %d",  &x, &y);
+                jogo.jogada.jogador = &jogo.jogador[j - 1];
+                jogo.jogada.x = x;
+                jogo.jogada.y = y;
             }
-            jogo.jogada.jogador = &jogo.jogador[j - 1];
-            jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[mt - 1];
-            jogo.jogada.x = x;
-            jogo.jogada.y = y;
-        } while (ValidaJogada(&jogo.jogada) == FALSE);
+        } while (Validacoes(&jogo.jogada) == FALSE);
         ModificaTabuleiro(&jogo.jogada);
     } while (1 /*ValidaVitoria()*/);
-
 }
 
-unsigned ValidaJogada(Jogada* jogada) {
+Jogada JogadaBOT(Jogo* jogo) {
+    Jogada jogada_bot;
+    jogada_bot.x = rand() % 3 + 1;
+    jogada_bot.y = rand() % 3 + 1;
+    return jogada_bot;
+}
+
+unsigned Validacoes(Jogada* jogada) {
+    return ValidaCoordenadas(jogada) * ValidaCasa(jogada);
+}
+
+unsigned ValidaCoordenadas(Jogada* jogada) {
     if (jogada->x >= 1 && jogada->x <= 3 &&
         jogada->y >= 1 && jogada->y <= 3) {
         return TRUE;
     }
 
-    printf("Erro: Jogada invalida!");
+
+    printf("Erro: Coordenadas invalidas!\n");
+    return FALSE;
+}
+
+unsigned ValidaCasa(Jogada* jogada) {
+    if (jogada->mini_tabuleiro->mini_casa[TAM_SIDE * (jogada->y - 1) + (jogada->x - 1)].peca == PECA_VAZIA)
+        return TRUE;
+
+    printf("Erro: Casa ja contem uma peca!\n");
     return FALSE;
 }
 
@@ -88,4 +111,8 @@ void ModificaTabuleiro(Jogada* jogada) {
 
     else if (jogada->jogador->id == P2 || jogada->jogador->id == BOT_ID)
         jogada->mini_tabuleiro->mini_casa[TAM_SIDE * (jogada->y - 1) + (jogada->x - 1)].peca = PECA_P2;
+}
+
+unsigned ValidaVitoria(Tabuleiro* tabuleiro) {
+
 }

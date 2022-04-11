@@ -1,6 +1,7 @@
 #include "MiniTabuleiro.h"
 
 void ResetMiniTabuleiro(MiniTabuleiro* mini_tabuleiro) {
+    mini_tabuleiro->proprietario = PECA_VAZIA;
     for (int i = 0; i < TAM; ++i) {
         ResetMiniCasa(&mini_tabuleiro->mini_casa[i]);
     }
@@ -39,4 +40,8 @@ void MostraFilaMiniTabuleiro(MiniTabuleiro* mini_tabuleiro, unsigned fila) {
     int diff = i;
     for (; i < TAM_SIDE + diff; ++i)
         MostraMiniCasa(&mini_tabuleiro->mini_casa[i]);
+}
+
+void MiniTabVerificaVitoria(MiniTabuleiro* mini_tabuleiro) {
+    // Todo: Completar funcao
 }

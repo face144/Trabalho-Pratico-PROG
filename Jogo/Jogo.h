@@ -3,6 +3,7 @@
 #include "../Jogador/Jogador.h"
 #include "../Tabuleiro/Tabuleiro.h"
 #include "../common.h"
+#include <ctype.h>
 
 typedef struct Jogada {
 
@@ -26,8 +27,11 @@ void Menu();
 int ValidaEscolhaMenu(unsigned escolha);
 void ProcecaEscolha(unsigned escolha);
 void SalaJogo(unsigned bot);
-void JogadaBOT();
-unsigned ValidaJogada(Jogada* jogada);
+Jogada JogadaBOT(Jogo* jogo);
+unsigned Validacoes(Jogada* jogada);
+unsigned ValidaCoordenadas(Jogada* jogada);
+unsigned ValidaCasa(Jogada* jogada);
 void ModificaTabuleiro(Jogada* jogada);
+unsigned ValidaVitoria();
 
 #endif //TRABALHO_PRATICO_JOGO_H
