@@ -90,7 +90,11 @@ Jogada JogadaBOT(Jogo* jogo) {
 }
 
 unsigned Validacoes(Jogada* jogada) {
-    return ValidaCoordenadas(jogada) * ValidaCasa(jogada);
+    if (ValidaCoordenadas(jogada) == TRUE)
+        if (ValidaCasa(jogada) == TRUE)
+            return TRUE;
+
+    return FALSE;
 }
 
 unsigned ValidaCoordenadas(Jogada* jogada) {
@@ -130,4 +134,15 @@ unsigned ValidaFimJogo(Jogo* jogo) {
         return TRUE;
     }
     return FALSE;
+}
+
+MiniTabuleiro* MiniTabProxJogada(Tabuleiro* tabuleiro, unsigned* x, unsigned* y) {
+    unsigned f = TAM_SIDE * (*y - 1) + (*x - 1);
+    for (; f < TAM_SIDE; (*y)++) {
+        for (; f < TAM_SIDE; (*x)++) {
+            if (tabuleiro->mini_tabuleiro[f].proprietario == PECA_VAZIA)
+                return &tabuleiro->mini_tabuleiro[f];
+            f = TAM_SIDE * (*y - 1) + (*x - 1);
+        }
+    }
 }
