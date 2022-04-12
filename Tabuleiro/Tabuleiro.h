@@ -13,5 +13,6 @@ typedef struct Tabuleiro {
 void ResetTabuleiro(Tabuleiro* tabuleiro);
 void MostraTabuleiro(Tabuleiro* tabuleiro);
 unsigned TabVerificaVitoria (Tabuleiro* tabuleiro);
+unsigned TabValidaEmpate(Tabuleiro* tabuleiro);
 
 #endif //TRABALHO_PRATICO_TABULEIRO_H

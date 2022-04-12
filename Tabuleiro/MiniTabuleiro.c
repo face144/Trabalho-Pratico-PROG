@@ -43,5 +43,58 @@ void MostraFilaMiniTabuleiro(MiniTabuleiro* mini_tabuleiro, unsigned fila) {
 }
 
 void MiniTabVerificaVitoria(MiniTabuleiro* mini_tabuleiro) {
-    // Todo: Completar funcao
+    if (mini_tabuleiro->mini_casa[0].peca == mini_tabuleiro->mini_casa[1].peca &&
+        mini_tabuleiro->mini_casa[1].peca == mini_tabuleiro->mini_casa[2].peca &&
+        mini_tabuleiro->mini_casa[0].peca != PECA_VAZIA) {
+        mini_tabuleiro->proprietario = mini_tabuleiro->mini_casa[0].peca;
+
+    } else if (mini_tabuleiro->mini_casa[3].peca == mini_tabuleiro->mini_casa[4].peca &&
+             mini_tabuleiro->mini_casa[4].peca == mini_tabuleiro->mini_casa[5].peca &&
+            mini_tabuleiro->mini_casa[0].peca != PECA_VAZIA) {
+        mini_tabuleiro->proprietario = mini_tabuleiro->mini_casa[3].peca;
+
+    } else if (mini_tabuleiro->mini_casa[6].peca == mini_tabuleiro->mini_casa[7].peca &&
+             mini_tabuleiro->mini_casa[7].peca == mini_tabuleiro->mini_casa[8].peca &&
+            mini_tabuleiro->mini_casa[0].peca != PECA_VAZIA) {
+        mini_tabuleiro->proprietario = mini_tabuleiro->mini_casa[6].peca;
+
+    } else if (mini_tabuleiro->mini_casa[0].peca == mini_tabuleiro->mini_casa[3].peca &&
+             mini_tabuleiro->mini_casa[3].peca == mini_tabuleiro->mini_casa[6].peca &&
+            mini_tabuleiro->mini_casa[0].peca != PECA_VAZIA) {
+        mini_tabuleiro->proprietario = mini_tabuleiro->mini_casa[0].peca;
+
+    } else if (mini_tabuleiro->mini_casa[1].peca == mini_tabuleiro->mini_casa[4].peca &&
+             mini_tabuleiro->mini_casa[4].peca == mini_tabuleiro->mini_casa[7].peca &&
+            mini_tabuleiro->mini_casa[0].peca != PECA_VAZIA) {
+        mini_tabuleiro->proprietario = mini_tabuleiro->mini_casa[1].peca;
+
+    } else if (mini_tabuleiro->mini_casa[2].peca == mini_tabuleiro->mini_casa[5].peca &&
+             mini_tabuleiro->mini_casa[5].peca == mini_tabuleiro->mini_casa[8].peca &&
+            mini_tabuleiro->mini_casa[0].peca != PECA_VAZIA) {
+        mini_tabuleiro->proprietario = mini_tabuleiro->mini_casa[2].peca;
+
+    } else if (mini_tabuleiro->mini_casa[0].peca == mini_tabuleiro->mini_casa[4].peca &&
+             mini_tabuleiro->mini_casa[4].peca == mini_tabuleiro->mini_casa[8].peca &&
+            mini_tabuleiro->mini_casa[0].peca != PECA_VAZIA) {
+        mini_tabuleiro->proprietario = mini_tabuleiro->mini_casa[0].peca;
+
+    } else if (mini_tabuleiro->mini_casa[2].peca == mini_tabuleiro->mini_casa[4].peca &&
+             mini_tabuleiro->mini_casa[4].peca == mini_tabuleiro->mini_casa[6].peca &&
+        mini_tabuleiro->mini_casa[0].peca != PECA_VAZIA) {
+        mini_tabuleiro->proprietario = mini_tabuleiro->mini_casa[2].peca;
+
+    } else
+        mini_tabuleiro->proprietario = PECA_VAZIA;
+}
+
+unsigned MiniTabValidaEmpate(MiniTabuleiro* miniTabuleiro) {
+    unsigned empate = FALSE;
+    for (int i = 0; i < TAM; ++i) {
+        if (miniTabuleiro->mini_casa[i].peca == PECA_VAZIA) {
+            empate = FALSE;
+            return empate;
+        } else
+            empate = TRUE;
+    }
+    return empate;
 }

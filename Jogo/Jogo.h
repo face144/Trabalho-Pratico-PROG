@@ -32,6 +32,7 @@ unsigned Validacoes(Jogada* jogada);
 unsigned ValidaCoordenadas(Jogada* jogada);
 unsigned ValidaCasa(Jogada* jogada);
 void ModificaTabuleiro(Jogada* jogada);
-unsigned ValidaVitoria();
+unsigned ValidaFimJogo(Jogo* jogo);
+MiniTabuleiro* MiniTabProxJogada(Tabuleiro* tabuleiro, unsigned* x, unsigned* y);
 
 #endif //TRABALHO_PRATICO_JOGO_H

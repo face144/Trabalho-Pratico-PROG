@@ -54,6 +54,66 @@ void MostraTabuleiro(Tabuleiro* tabuleiro) {
 }
 
 unsigned TabVerificaVitoria(Tabuleiro* tabuleiro) {
-    // Todo: Completar função
-    // MiniTabVerificaVitoria(tabuleiro->mini_tabuleiro);
+    for (int i = 0; i < TAM; ++i) {
+        MiniTabVerificaVitoria(&tabuleiro->mini_tabuleiro[i]);
+    }
+
+    printf("\n");
+    for (int i = 0; i < TAM; ++i) {
+        printf("Proprietario do Mini Tab. %d: %d\n", i, tabuleiro->mini_tabuleiro[i].proprietario);
+    }
+
+    if (tabuleiro->mini_tabuleiro[0].proprietario == tabuleiro->mini_tabuleiro[1].proprietario &&
+        tabuleiro->mini_tabuleiro[1].proprietario == tabuleiro->mini_tabuleiro[2].proprietario &&
+        tabuleiro->mini_tabuleiro[0].proprietario != PECA_VAZIA) {
+        return TRUE;
+
+    } else if (tabuleiro->mini_tabuleiro[3].proprietario == tabuleiro->mini_tabuleiro[4].proprietario &&
+               tabuleiro->mini_tabuleiro[4].proprietario == tabuleiro->mini_tabuleiro[5].proprietario &&
+               tabuleiro->mini_tabuleiro[3].proprietario != PECA_VAZIA) {
+        return TRUE;
+
+    } else if (tabuleiro->mini_tabuleiro[6].proprietario == tabuleiro->mini_tabuleiro[7].proprietario &&
+               tabuleiro->mini_tabuleiro[7].proprietario == tabuleiro->mini_tabuleiro[8].proprietario &&
+               tabuleiro->mini_tabuleiro[6].proprietario != PECA_VAZIA) {
+        return TRUE;
+
+    } else if (tabuleiro->mini_tabuleiro[0].proprietario == tabuleiro->mini_tabuleiro[3].proprietario &&
+               tabuleiro->mini_tabuleiro[3].proprietario == tabuleiro->mini_tabuleiro[6].proprietario &&
+               tabuleiro->mini_tabuleiro[0].proprietario != PECA_VAZIA) {
+        return TRUE;
+
+    } else if (tabuleiro->mini_tabuleiro[1].proprietario == tabuleiro->mini_tabuleiro[4].proprietario &&
+               tabuleiro->mini_tabuleiro[4].proprietario == tabuleiro->mini_tabuleiro[7].proprietario &&
+               tabuleiro->mini_tabuleiro[1].proprietario != PECA_VAZIA) {
+        return TRUE;
+
+    } else if (tabuleiro->mini_tabuleiro[2].proprietario == tabuleiro->mini_tabuleiro[5].proprietario &&
+               tabuleiro->mini_tabuleiro[5].proprietario == tabuleiro->mini_tabuleiro[8].proprietario &&
+               tabuleiro->mini_tabuleiro[2].proprietario != PECA_VAZIA) {
+        return TRUE;
+
+    } else if (tabuleiro->mini_tabuleiro[0].proprietario == tabuleiro->mini_tabuleiro[4].proprietario &&
+               tabuleiro->mini_tabuleiro[4].proprietario == tabuleiro->mini_tabuleiro[8].proprietario &&
+               tabuleiro->mini_tabuleiro[0].proprietario != PECA_VAZIA) {
+        return TRUE;
+
+    } else if (tabuleiro->mini_tabuleiro[2].proprietario == tabuleiro->mini_tabuleiro[4].proprietario &&
+               tabuleiro->mini_tabuleiro[4].proprietario == tabuleiro->mini_tabuleiro[6].proprietario &&
+               tabuleiro->mini_tabuleiro[2].proprietario != PECA_VAZIA) {
+        return TRUE;
+
+    } else return FALSE;
+}
+
+unsigned TabValidaEmpate(Tabuleiro* tabuleiro) {
+    unsigned empate = FALSE;
+    for (int i = 0; i < TAM; ++i) {
+        if (MiniTabValidaEmpate(tabuleiro->mini_tabuleiro) == FALSE) {
+            empate = FALSE;
+            return empate;
+        } else
+            empate = TRUE;
+    }
+    return empate;
 }

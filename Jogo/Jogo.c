@@ -48,7 +48,7 @@ void SalaJogo(unsigned bot) {
     InicializaJogadores(jogo.jogador, bot);
     ResetTabuleiro(&jogo.tabuleiro);
 
-    unsigned j = 0, x = 1, y = 1, mt;
+    unsigned j = 0, x = 1, y = 1, x_ant = 1, y_ant = 1;
     do {
         jogo.jogada.x = -1;
         jogo.jogada.y = -1;
@@ -60,11 +60,15 @@ void SalaJogo(unsigned bot) {
             if (bot == TRUE && j == 2) {
                 jogo.jogada = JogadaBOT(&jogo);
                 jogo.jogada.jogador = &jogo.jogador[j - 1];
-                jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[TAM_SIDE * (y - 1) + (x - 1)];
-            } else {
-                jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[TAM_SIDE * (y - 1) + (x - 1)];
+                // Mini tabuleiro muda quer coordenadas estejam certas ou erradas
+                // o que leva a que se possa jogar no tabuleiro x100 y100
+                // Linha a baixo contem o código que muda o mini tabuleiro da jogada
+                if (jogo.jogada.mini_tabuleiro->proprietario != PECA_VAZIA)
+                    jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[TAM_SIDE * (y - 1) + (x - 1)];
 
-                printf("Tabuleiro x%d y%d : Jogador %d ('x' 'y'): ", x, y, j);
+            } else {
+                jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[TAM_SIDE * (y_ant - 1) + (x_ant - 1)];
+                printf("Tabuleiro x%d y%d : Jogador %d ('x' 'y'): ", x_ant, y_ant, j);
                 scanf("%d %d",  &x, &y);
                 jogo.jogada.jogador = &jogo.jogador[j - 1];
                 jogo.jogada.x = x;
@@ -72,7 +76,10 @@ void SalaJogo(unsigned bot) {
             }
         } while (Validacoes(&jogo.jogada) == FALSE);
         ModificaTabuleiro(&jogo.jogada);
-    } while (1 /*ValidaVitoria()*/);
+        y_ant = y;
+        x_ant = x;
+        jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[TAM_SIDE * (y_ant - 1) + (x_ant - 1)];
+    } while (ValidaFimJogo(&jogo) == FALSE);
 }
 
 Jogada JogadaBOT(Jogo* jogo) {
@@ -83,7 +90,11 @@ Jogada JogadaBOT(Jogo* jogo) {
 }
 
 unsigned Validacoes(Jogada* jogada) {
-    return ValidaCoordenadas(jogada) * ValidaCasa(jogada);
+    if (ValidaCoordenadas(jogada) == TRUE)
+        if (ValidaCasa(jogada) == TRUE)
+            return TRUE;
+
+    return FALSE;
 }
 
 unsigned ValidaCoordenadas(Jogada* jogada) {
@@ -113,6 +124,25 @@ void ModificaTabuleiro(Jogada* jogada) {
         jogada->mini_tabuleiro->mini_casa[TAM_SIDE * (jogada->y - 1) + (jogada->x - 1)].peca = PECA_P2;
 }
 
-unsigned ValidaVitoria(Tabuleiro* tabuleiro) {
+unsigned ValidaFimJogo(Jogo* jogo) {
+    if (TabVerificaVitoria(&jogo->tabuleiro) == TRUE) {
+        printf("Fim do jogo! Vencedor: Jogador %d\n", jogo->jogada.jogador->id);
+        return TRUE;
 
+    } else if (TabValidaEmpate(&jogo->tabuleiro) == TRUE) {
+        printf("Fim do jogo. Empate!");
+        return TRUE;
+    }
+    return FALSE;
+}
+
+MiniTabuleiro* MiniTabProxJogada(Tabuleiro* tabuleiro, unsigned* x, unsigned* y) {
+    unsigned f = TAM_SIDE * (*y - 1) + (*x - 1);
+    for (; f < TAM_SIDE; (*y)++) {
+        for (; f < TAM_SIDE; (*x)++) {
+            if (tabuleiro->mini_tabuleiro[f].proprietario == PECA_VAZIA)
+                return &tabuleiro->mini_tabuleiro[f];
+            f = TAM_SIDE * (*y - 1) + (*x - 1);
+        }
+    }
 }
