@@ -2,6 +2,8 @@
 
 void ResetMiniTabuleiro(MiniTabuleiro* mini_tabuleiro) {
     mini_tabuleiro->proprietario = PECA_VAZIA;
+    mini_tabuleiro->x_coord = -1;
+    mini_tabuleiro->y_coord = -1;
     for (int i = 0; i < TAM; ++i) {
         ResetMiniCasa(&mini_tabuleiro->mini_casa[i]);
     }
@@ -97,4 +99,11 @@ unsigned MiniTabValidaEmpate(MiniTabuleiro* miniTabuleiro) {
             empate = TRUE;
     }
     return empate;
+}
+
+unsigned MiniTabuleiroCompleto(MiniTabuleiro* mini_tabuleiro) {
+    if (mini_tabuleiro->proprietario != PECA_VAZIA)
+        return TRUE;
+
+    return FALSE;
 }
