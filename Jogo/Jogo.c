@@ -1,5 +1,32 @@
 #include "Jogo.h"
 
+void InicializaSaveInfo(SaveInfo* save_info) {
+    save_info->tam = 10;
+    save_info->jogada = malloc(save_info->tam * sizeof(Jogada));
+}
+
+void GuardarJogadas(SaveInfo* save_info) {
+    save_info->savefile = fopen("save.bin", "wb");
+
+    if (!save_info->savefile) {
+        printf("Erro: Erro ao abrir/criar ficheiro!\n");
+        return;
+    }
+
+    fwrite(save_info->jogada, sizeof(Jogada), 1, save_info->savefile);
+    fclose(save_info->savefile);
+}
+
+void AdicionaJogada(SaveInfo* save_info, Jogada* jogada) {
+    for (unsigned i = 0; &save_info->jogada[i] != '\0' ; ++i) {
+        if (&save_info->jogada[i] == NULL) {
+            save_info->jogada[i] = *jogada;
+        }
+    }
+    save_info->tam++;
+    save_info->jogada = realloc(save_info->jogada, save_info->tam);
+}
+
 void Menu() {
     printf("--- TIC-TAC-TOE: Ultimate ---\n\n");
 
@@ -45,6 +72,7 @@ void ProcecaEscolha(unsigned escolha) {
 
 void SalaJogo(unsigned bot) {
     Jogo jogo;
+    InicializaSaveInfo(&jogo.save_info);
     InicializaJogadores(jogo.jogador, bot);
     ResetTabuleiro(&jogo.tabuleiro);
 
@@ -78,7 +106,9 @@ void SalaJogo(unsigned bot) {
         y_ant = y;
         x_ant = x;
         jogo.jogada.mini_tabuleiro = ProxMiniTabuleiroJogavel(&jogo.tabuleiro, indice);
+        AdicionaJogada(&jogo.save_info, &jogo.jogada);
     } while (ValidaFimJogo(&jogo) == FALSE);
+    GuardarJogadas(&jogo.save_info);
 }
 
 Jogada JogadaBOT(Jogo* jogo) {

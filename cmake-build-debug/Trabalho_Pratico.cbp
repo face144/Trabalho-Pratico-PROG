@@ -76,6 +76,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Ficheiros/Savegame.c">
+			<Option target="Trabalho_Pratico"/>
+		</Unit>
+		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Ficheiros/Savegame.h">
+			<Option target="Trabalho_Pratico"/>
+		</Unit>
 		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogador/Jogador.c">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>

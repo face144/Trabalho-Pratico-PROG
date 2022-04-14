@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Trabalho_Pratico.dir/Ficheiros/Savegame.c.obj"
   "CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.obj"
   "CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.obj"
   "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj"
