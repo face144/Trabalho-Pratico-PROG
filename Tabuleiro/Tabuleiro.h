@@ -14,5 +14,6 @@ void ResetTabuleiro(Tabuleiro* tabuleiro);
 void MostraTabuleiro(Tabuleiro* tabuleiro);
 unsigned TabVerificaVitoria (Tabuleiro* tabuleiro);
 unsigned TabValidaEmpate(Tabuleiro* tabuleiro);
+MiniTabuleiro* ProxMiniTabuleiroJogavel(Tabuleiro* tabuleiro, unsigned indice);
 
 #endif //TRABALHO_PRATICO_TABULEIRO_H

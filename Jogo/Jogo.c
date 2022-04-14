@@ -54,21 +54,20 @@ void SalaJogo(unsigned bot) {
         jogo.jogada.y = -1;
         MostraTabuleiro(&jogo.tabuleiro);
         j++;
+        unsigned indice = TAM_SIDE * (y_ant - 1) + (x_ant - 1);
         if (j % 2 == 0) j = 2; else j = 1;
 
         do {
+            jogo.jogada.mini_tabuleiro = ProxMiniTabuleiroJogavel(&jogo.tabuleiro, indice);
             if (bot == TRUE && j == 2) {
                 jogo.jogada = JogadaBOT(&jogo);
                 jogo.jogada.jogador = &jogo.jogador[j - 1];
-                // Mini tabuleiro muda quer coordenadas estejam certas ou erradas
-                // o que leva a que se possa jogar no tabuleiro x100 y100
-                // Linha a baixo contem o código que muda o mini tabuleiro da jogada
-                if (jogo.jogada.mini_tabuleiro->proprietario != PECA_VAZIA)
-                    jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[TAM_SIDE * (y - 1) + (x - 1)];
 
             } else {
-                jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[TAM_SIDE * (y_ant - 1) + (x_ant - 1)];
-                printf("Tabuleiro x%d y%d : Jogador %d ('x' 'y'): ", x_ant, y_ant, j);
+                // jogo.jogada.mini_tabuleiro = ProxMiniTabuleiroJogavel(&jogo.tabuleiro, indice);
+                unsigned x_coord = jogo.jogada.mini_tabuleiro->x_coord;
+                unsigned y_coord = jogo.jogada.mini_tabuleiro->y_coord;
+                printf("Tabuleiro x%d y%d : Jogador %d ('x' 'y'): ", x_coord, y_coord, j);
                 scanf("%d %d",  &x, &y);
                 jogo.jogada.jogador = &jogo.jogador[j - 1];
                 jogo.jogada.x = x;
@@ -78,7 +77,7 @@ void SalaJogo(unsigned bot) {
         ModificaTabuleiro(&jogo.jogada);
         y_ant = y;
         x_ant = x;
-        jogo.jogada.mini_tabuleiro = &jogo.tabuleiro.mini_tabuleiro[TAM_SIDE * (y_ant - 1) + (x_ant - 1)];
+        jogo.jogada.mini_tabuleiro = ProxMiniTabuleiroJogavel(&jogo.tabuleiro, indice);
     } while (ValidaFimJogo(&jogo) == FALSE);
 }
 

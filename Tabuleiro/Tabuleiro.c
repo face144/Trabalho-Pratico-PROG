@@ -4,8 +4,13 @@ void ResetTabuleiro(Tabuleiro* tabuleiro) {
     free(tabuleiro->mini_tabuleiro);
 
     tabuleiro->mini_tabuleiro = malloc(TAM * sizeof(MiniTabuleiro));
-    for (int i = 0; i < TAM; ++i) {
-        ResetMiniTabuleiro(&tabuleiro->mini_tabuleiro[i]);
+    for (int i = 0; i < TAM_SIDE; ++i) {
+        for (int j = 0; j < TAM_SIDE; ++j) {
+            unsigned indice = TAM_SIDE * j + i;
+            ResetMiniTabuleiro(&tabuleiro->mini_tabuleiro[indice]);
+            tabuleiro->mini_tabuleiro[indice].x_coord = i + 1;
+            tabuleiro->mini_tabuleiro[indice].y_coord = j + 1;
+        }
     }
 }
 
@@ -116,4 +121,12 @@ unsigned TabValidaEmpate(Tabuleiro* tabuleiro) {
             empate = TRUE;
     }
     return empate;
+}
+
+MiniTabuleiro* ProxMiniTabuleiroJogavel(Tabuleiro* tabuleiro, unsigned indice) {
+    for (; indice < TAM; ++indice) {
+        if (MiniTabuleiroCompleto(&tabuleiro->mini_tabuleiro[indice]) == FALSE) {
+            return &tabuleiro->mini_tabuleiro[indice];
+        }
+    }
 }
