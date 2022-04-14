@@ -15,11 +15,24 @@ typedef struct Jogada {
 
 } Jogada;
 
+typedef struct Saveinfo {
+
+    unsigned tam;
+    Jogada* jogada;
+    FILE* savefile;
+
+}SaveInfo;
+
+void InicializaSaveInfo(SaveInfo* save_info);
+void GuardarJogadas(SaveInfo* save_info);
+void AdicionaJogada(SaveInfo* save_info, Jogada* jogada);
+
 typedef struct Jogo {
 
     Jogador jogador[2];
     Tabuleiro tabuleiro;
     Jogada jogada;
+    SaveInfo save_info;
 
 } Jogo;
 

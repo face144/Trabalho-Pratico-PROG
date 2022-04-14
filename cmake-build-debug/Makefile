@@ -128,6 +128,30 @@ Trabalho_Pratico/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/build
 .PHONY : Trabalho_Pratico/fast
 
+Ficheiros/Savegame.obj: Ficheiros/Savegame.c.obj
+.PHONY : Ficheiros/Savegame.obj
+
+# target to build an object file
+Ficheiros/Savegame.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Ficheiros/Savegame.c.obj
+.PHONY : Ficheiros/Savegame.c.obj
+
+Ficheiros/Savegame.i: Ficheiros/Savegame.c.i
+.PHONY : Ficheiros/Savegame.i
+
+# target to preprocess a source file
+Ficheiros/Savegame.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Ficheiros/Savegame.c.i
+.PHONY : Ficheiros/Savegame.c.i
+
+Ficheiros/Savegame.s: Ficheiros/Savegame.c.s
+.PHONY : Ficheiros/Savegame.s
+
+# target to generate assembly for a file
+Ficheiros/Savegame.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Ficheiros/Savegame.c.s
+.PHONY : Ficheiros/Savegame.c.s
+
 Jogador/Jogador.obj: Jogador/Jogador.c.obj
 .PHONY : Jogador/Jogador.obj
 
@@ -281,6 +305,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Trabalho_Pratico
+	@echo ... Ficheiros/Savegame.obj
+	@echo ... Ficheiros/Savegame.i
+	@echo ... Ficheiros/Savegame.s
 	@echo ... Jogador/Jogador.obj
 	@echo ... Jogador/Jogador.i
 	@echo ... Jogador/Jogador.s
