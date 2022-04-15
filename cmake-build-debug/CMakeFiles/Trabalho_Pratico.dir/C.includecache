@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Ficheiros/Savegame.c
-Savegame.h
-C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Ficheiros/Savegame.h
-
-C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Ficheiros/Savegame.h
-../Jogo/Jogo.h
-C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogo/Jogo.h
-stdlib.h
--
-
 C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogador/Jogador.h
 ../common.h
 C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h

@@ -1,30 +1,21 @@
 #include "Jogo.h"
 
-void InicializaSaveInfo(SaveInfo* save_info) {
-    save_info->tam = 10;
-    save_info->jogada = malloc(save_info->tam * sizeof(Jogada));
-}
+void GuardarJogo(Jogo* jogo, unsigned j) {
+    if (j == 1)
+        j = 2;
+    else
+        j = 1;
 
-void GuardarJogadas(SaveInfo* save_info) {
-    save_info->savefile = fopen("save.bin", "wb");
+    jogo->save_info.j = j;
+    jogo->save_info.savefile = fopen("jogo.bin", "wb");
 
-    if (!save_info->savefile) {
-        printf("Erro: Erro ao abrir/criar ficheiro!\n");
+    if (!jogo->save_info.savefile) {
+        printf("Erro: Erro ao guardar jogo!\n");
         return;
     }
 
-    fwrite(save_info->jogada, sizeof(Jogada), 1, save_info->savefile);
-    fclose(save_info->savefile);
-}
-
-void AdicionaJogada(SaveInfo* save_info, Jogada* jogada) {
-    for (unsigned i = 0; &save_info->jogada[i] != '\0' ; ++i) {
-        if (&save_info->jogada[i] == NULL) {
-            save_info->jogada[i] = *jogada;
-        }
-    }
-    save_info->tam++;
-    save_info->jogada = realloc(save_info->jogada, save_info->tam);
+    fwrite(&jogo->save_info, sizeof(SaveInfo), 1, jogo->save_info.savefile);
+    fclose(jogo->save_info.savefile);
 }
 
 void Menu() {
@@ -54,14 +45,15 @@ int ValidaEscolhaMenu(unsigned escolha) {
 void ProcecaEscolha(unsigned escolha) {
     switch (escolha) {
         case 1: // Um jogador
-            SalaJogo(TRUE);
+            SalaJogo(TRUE, escolha);
             break;
 
         case 2: // Dois jogadores
-            SalaJogo(FALSE);
+            SalaJogo(FALSE, escolha);
             break;
 
         case 3: // Carregar jogo (ficheiro binario)
+            SalaJogo(TRUE, escolha);
             break;
 
         default: // exit(0) duuh
@@ -70,13 +62,17 @@ void ProcecaEscolha(unsigned escolha) {
     }
 }
 
-void SalaJogo(unsigned bot) {
+void SalaJogo(unsigned bot, unsigned escolha) {
     Jogo jogo;
-    InicializaSaveInfo(&jogo.save_info);
     InicializaJogadores(jogo.jogador, bot);
     ResetTabuleiro(&jogo.tabuleiro);
 
-    unsigned j = 0, x = 1, y = 1, x_ant = 1, y_ant = 1;
+    unsigned x = 1, y = 1, x_ant = 1, y_ant = 1;
+    unsigned j = 0;
+    if (escolha == 3) {
+        j = RetomaJogo(&jogo);
+    }
+
     do {
         jogo.jogada.x = -1;
         jogo.jogada.y = -1;
@@ -97,6 +93,10 @@ void SalaJogo(unsigned bot) {
                 unsigned y_coord = jogo.jogada.mini_tabuleiro->y_coord;
                 printf("Tabuleiro x%d y%d : Jogador %d ('x' 'y'): ", x_coord, y_coord, j);
                 scanf("%d %d",  &x, &y);
+                if (x == -1 && y == -1) {
+                    GuardarJogo(&jogo, j); // Remover depois de testar
+                    return;
+                }
                 jogo.jogada.jogador = &jogo.jogador[j - 1];
                 jogo.jogada.x = x;
                 jogo.jogada.y = y;
@@ -106,9 +106,8 @@ void SalaJogo(unsigned bot) {
         y_ant = y;
         x_ant = x;
         jogo.jogada.mini_tabuleiro = ProxMiniTabuleiroJogavel(&jogo.tabuleiro, indice);
-        AdicionaJogada(&jogo.save_info, &jogo.jogada);
     } while (ValidaFimJogo(&jogo) == FALSE);
-    GuardarJogadas(&jogo.save_info);
+    // GuardarJogadas(&jogo.save_info);
 }
 
 Jogada JogadaBOT(Jogo* jogo) {
@@ -174,4 +173,27 @@ MiniTabuleiro* MiniTabProxJogada(Tabuleiro* tabuleiro, unsigned* x, unsigned* y)
             f = TAM_SIDE * (*y - 1) + (*x - 1);
         }
     }
+}
+
+unsigned RetomaJogo(Jogo* jogo) {
+    jogo->save_info.savefile = fopen("jogo.bin", "wb");
+
+    if (!jogo->save_info.savefile) {
+        printf("Erro: Erro ao carregar jogo!\n");
+        return -2;
+    }
+
+    fread(&jogo->save_info, sizeof(SaveInfo), 1, jogo->save_info.savefile);
+    fclose(jogo->save_info.savefile);
+
+    jogo->tabuleiro = *jogo->save_info.tabuleiro; // Todo: Não fumecina
+    free(jogo->save_info.tabuleiro);
+
+    for (int i = 0; i < 2; ++i) {
+        jogo->jogador[i] = jogo->save_info.jogadores[i];
+    }
+
+    unsigned prox_jogador = jogo->save_info.j;
+    free(jogo->save_info.jogadores);
+    return prox_jogador;
 }
