@@ -5,7 +5,7 @@ int main() {
 
     // Testar as funçoes aquie faixa bor
 
-    Menu();
+    while (1) Menu();
 
     system("pause"); // Não tirare
     return 0;

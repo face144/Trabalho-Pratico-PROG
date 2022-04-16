@@ -16,10 +16,10 @@ typedef struct Jogada {
 
 typedef struct Saveinfo {
 
-    unsigned j;
-    Tabuleiro* tabuleiro;
+    unsigned prox_jogador;
+    Tabuleiro tabuleiro;
     Jogador jogadores[2];
-    FILE* savefile;
+    Jogada jogada;
 
 }SaveInfo;
 
@@ -36,7 +36,7 @@ void GuardarJogo(Jogo* jogo, unsigned j);
 void Menu();
 int ValidaEscolhaMenu(unsigned escolha);
 void ProcecaEscolha(unsigned escolha);
-void SalaJogo(unsigned bot, unsigned escolha);
+void SalaJogo(unsigned escolha, Jogo* jogo);
 Jogada JogadaBOT(Jogo* jogo);
 unsigned Validacoes(Jogada* jogada);
 unsigned ValidaCoordenadas(Jogada* jogada);
@@ -44,7 +44,7 @@ unsigned ValidaCasa(Jogada* jogada);
 void ModificaTabuleiro(Jogada* jogada);
 unsigned ValidaFimJogo(Jogo* jogo);
 MiniTabuleiro* MiniTabProxJogada(Tabuleiro* tabuleiro, unsigned* x, unsigned* y);
-unsigned RetomaJogo(Jogo* jogo);
+int RetomaJogo(Jogo* jogo);
 
 
 #endif //TRABALHO_PRATICO_JOGO_H

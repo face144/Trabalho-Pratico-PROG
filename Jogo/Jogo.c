@@ -6,16 +6,23 @@ void GuardarJogo(Jogo* jogo, unsigned j) {
     else
         j = 1;
 
-    jogo->save_info.j = j;
-    jogo->save_info.savefile = fopen("jogo.bin", "wb");
+    jogo->save_info.prox_jogador = j;
+    jogo->save_info.tabuleiro = jogo->tabuleiro;
+    for (int i = 0; i < 2; ++i) {
+        jogo->save_info.jogadores[i] = jogo->jogador[i];
+    }
+    jogo->save_info.jogada = jogo->jogada;
 
-    if (!jogo->save_info.savefile) {
+    FILE* savefile = fopen("jogo.bin", "wb");
+
+    if (!savefile) {
         printf("Erro: Erro ao guardar jogo!\n");
         return;
     }
 
-    fwrite(&jogo->save_info, sizeof(SaveInfo), 1, jogo->save_info.savefile);
-    fclose(jogo->save_info.savefile);
+    fwrite(&jogo, sizeof(Jogo), 1, savefile);
+    fclose(savefile);
+    printf("Sucesso: Jogo guardado!\n");
 }
 
 void Menu() {
@@ -43,70 +50,61 @@ int ValidaEscolhaMenu(unsigned escolha) {
 }
 
 void ProcecaEscolha(unsigned escolha) {
-    switch (escolha) {
-        case 1: // Um jogador
-            SalaJogo(TRUE, escolha);
-            break;
-
-        case 2: // Dois jogadores
-            SalaJogo(FALSE, escolha);
-            break;
-
-        case 3: // Carregar jogo (ficheiro binario)
-            SalaJogo(TRUE, escolha);
-            break;
-
-        default: // exit(0) duuh
-            exit(0);
-            break;
-    }
+    Jogo jogo;
+    if (escolha == 4) exit(0);
+    else SalaJogo(escolha, &jogo);
 }
 
-void SalaJogo(unsigned bot, unsigned escolha) {
-    Jogo jogo;
-    InicializaJogadores(jogo.jogador, bot);
-    ResetTabuleiro(&jogo.tabuleiro);
-
+void SalaJogo(unsigned escolha, Jogo* jogo) {
+    unsigned bot = FALSE;
+    if (escolha == 1) bot = TRUE; else if (escolha == 2) bot = FALSE;
+    InicializaJogadores(jogo->jogador, bot);
+    ResetTabuleiro(&jogo->tabuleiro, escolha);
     unsigned x = 1, y = 1, x_ant = 1, y_ant = 1;
     unsigned j = 0;
     if (escolha == 3) {
-        j = RetomaJogo(&jogo);
+        int sucesso = RetomaJogo(jogo);
+            if (sucesso == -2)
+                return;
+
+            j = sucesso;
     }
 
     do {
-        jogo.jogada.x = -1;
-        jogo.jogada.y = -1;
-        MostraTabuleiro(&jogo.tabuleiro);
+        jogo->jogada.x = -1;
+        jogo->jogada.y = -1;
+        MostraTabuleiro(&jogo->tabuleiro);
         j++;
         unsigned indice = TAM_SIDE * (y_ant - 1) + (x_ant - 1);
         if (j % 2 == 0) j = 2; else j = 1;
 
         do {
-            jogo.jogada.mini_tabuleiro = ProxMiniTabuleiroJogavel(&jogo.tabuleiro, indice);
+            jogo->jogada.mini_tabuleiro = ProxMiniTabuleiroJogavel(&jogo->tabuleiro, indice);
             if (bot == TRUE && j == 2) {
-                jogo.jogada = JogadaBOT(&jogo);
-                jogo.jogada.jogador = &jogo.jogador[j - 1];
+                jogo->jogada = JogadaBOT(jogo);
+                jogo->jogada.jogador = &jogo->jogador[j - 1];
 
             } else {
                 // jogo.jogada.mini_tabuleiro = ProxMiniTabuleiroJogavel(&jogo.tabuleiro, indice);
-                unsigned x_coord = jogo.jogada.mini_tabuleiro->x_coord;
-                unsigned y_coord = jogo.jogada.mini_tabuleiro->y_coord;
+                int x_coord = jogo->jogada.mini_tabuleiro->x_coord;
+                int y_coord = jogo->jogada.mini_tabuleiro->y_coord;
                 printf("Tabuleiro x%d y%d : Jogador %d ('x' 'y'): ", x_coord, y_coord, j);
                 scanf("%d %d",  &x, &y);
                 if (x == -1 && y == -1) {
-                    GuardarJogo(&jogo, j); // Remover depois de testar
+                    GuardarJogo(jogo, j); // Remover depois de testar
                     return;
                 }
-                jogo.jogada.jogador = &jogo.jogador[j - 1];
-                jogo.jogada.x = x;
-                jogo.jogada.y = y;
+
+                jogo->jogada.jogador = &jogo->jogador[j - 1];
+                jogo->jogada.x = x;
+                jogo->jogada.y = y;
             }
-        } while (Validacoes(&jogo.jogada) == FALSE);
-        ModificaTabuleiro(&jogo.jogada);
+        } while (Validacoes(&jogo->jogada) == FALSE);
+        ModificaTabuleiro(&jogo->jogada);
         y_ant = y;
         x_ant = x;
-        jogo.jogada.mini_tabuleiro = ProxMiniTabuleiroJogavel(&jogo.tabuleiro, indice);
-    } while (ValidaFimJogo(&jogo) == FALSE);
+        jogo->jogada.mini_tabuleiro = ProxMiniTabuleiroJogavel(&jogo->tabuleiro, indice);
+    } while (ValidaFimJogo(jogo) == FALSE);
     // GuardarJogadas(&jogo.save_info);
 }
 
@@ -175,25 +173,16 @@ MiniTabuleiro* MiniTabProxJogada(Tabuleiro* tabuleiro, unsigned* x, unsigned* y)
     }
 }
 
-unsigned RetomaJogo(Jogo* jogo) {
-    jogo->save_info.savefile = fopen("jogo.bin", "wb");
+int RetomaJogo(Jogo* jogo) {
+    FILE* savefile = fopen("jogo.bin", "wb");
 
-    if (!jogo->save_info.savefile) {
+    if (!savefile) {
         printf("Erro: Erro ao carregar jogo!\n");
         return -2;
     }
 
-    fread(&jogo->save_info, sizeof(SaveInfo), 1, jogo->save_info.savefile);
-    fclose(jogo->save_info.savefile);
-
-    jogo->tabuleiro = *jogo->save_info.tabuleiro; // Todo: Não fumecina
-    free(jogo->save_info.tabuleiro);
-
-    for (int i = 0; i < 2; ++i) {
-        jogo->jogador[i] = jogo->save_info.jogadores[i];
-    }
-
-    unsigned prox_jogador = jogo->save_info.j;
-    free(jogo->save_info.jogadores);
-    return prox_jogador;
+    fread(&jogo, sizeof(SaveInfo), 1,savefile);
+    fclose(savefile);
+    printf("Sucesso: Jogo carregado!\n");
+    return 0;
 }

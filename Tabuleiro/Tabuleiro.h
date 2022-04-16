@@ -10,7 +10,7 @@ typedef struct Tabuleiro {
 
 }Tabuleiro;
 
-void ResetTabuleiro(Tabuleiro* tabuleiro);
+void ResetTabuleiro(Tabuleiro* tabuleiro, unsigned carregar_jogo);
 void MostraTabuleiro(Tabuleiro* tabuleiro);
 unsigned TabVerificaVitoria (Tabuleiro* tabuleiro);
 unsigned TabValidaEmpate(Tabuleiro* tabuleiro);
