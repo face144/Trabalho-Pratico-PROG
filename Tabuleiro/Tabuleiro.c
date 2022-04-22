@@ -1,6 +1,7 @@
 #include "Tabuleiro.h"
 
-void ResetTabuleiro(Tabuleiro* tabuleiro, unsigned carregar_jogo) {
+void ResetTabuleiro(Tabuleiro* tabuleiro) {
+    tabuleiro->mini_tabuleiro = NULL;
     free(tabuleiro->mini_tabuleiro);
 
     tabuleiro->mini_tabuleiro = malloc(TAM * sizeof(MiniTabuleiro));

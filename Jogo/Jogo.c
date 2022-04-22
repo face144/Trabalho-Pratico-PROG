@@ -59,7 +59,7 @@ void SalaJogo(unsigned escolha, Jogo* jogo) {
     unsigned bot = FALSE;
     if (escolha == 1) bot = TRUE; else if (escolha == 2) bot = FALSE;
     InicializaJogadores(jogo->jogador, bot);
-    ResetTabuleiro(&jogo->tabuleiro, escolha);
+    ResetTabuleiro(&jogo->tabuleiro);
     unsigned x = 1, y = 1, x_ant = 1, y_ant = 1;
     unsigned j = 0;
     if (escolha == 3) {
@@ -181,7 +181,7 @@ int RetomaJogo(Jogo* jogo) {
         return -2;
     }
 
-    fread(&jogo, sizeof(SaveInfo), 1,savefile);
+    fread(&jogo, sizeof(Jogo), 1,savefile);
     fclose(savefile);
     printf("Sucesso: Jogo carregado!\n");
     return 0;
