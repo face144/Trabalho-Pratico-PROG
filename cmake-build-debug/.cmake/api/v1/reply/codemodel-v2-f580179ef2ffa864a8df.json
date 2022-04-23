@@ -6,7 +6,6 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
@@ -49,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Github/Trabalho-Pratico-Prog/cmake-build-debug",
-		"source" : "D:/Github/Trabalho-Pratico-Prog"
+		"build" : "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug",
+		"source" : "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 2
 	}
 }

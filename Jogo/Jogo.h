@@ -44,7 +44,7 @@ unsigned ValidaCasa(Jogada* jogada);
 void ModificaTabuleiro(Jogada* jogada);
 unsigned ValidaFimJogo(Jogo* jogo);
 MiniTabuleiro* MiniTabProxJogada(Tabuleiro* tabuleiro, unsigned* x, unsigned* y);
-int RetomaJogo(Jogo* jogo);
+void RetomaJogo(Jogo* jogo);
 
 
 #endif //TRABALHO_PRATICO_JOGO_H

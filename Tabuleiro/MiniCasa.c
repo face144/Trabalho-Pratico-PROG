@@ -5,6 +5,7 @@ void ResetMiniCasa(MiniCasa* mini_casa) {
 }
 
 void MostraMiniCasa(MiniCasa* mini_casa) {
+
     switch (mini_casa->peca) {
 
         case PECA_VAZIA:
@@ -18,5 +19,8 @@ void MostraMiniCasa(MiniCasa* mini_casa) {
         case PECA_P2:
             printf(STR_PECA_P2);
             break;
+
+
+
     }
 }

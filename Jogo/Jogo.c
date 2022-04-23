@@ -20,7 +20,7 @@ void GuardarJogo(Jogo* jogo, unsigned j) {
         return;
     }
 
-    fwrite(&jogo, sizeof(Jogo), 1, savefile);
+    fwrite(&jogo->save_info, sizeof(SaveInfo), 1, savefile);
     fclose(savefile);
     printf("Sucesso: Jogo guardado!\n");
 }
@@ -63,11 +63,7 @@ void SalaJogo(unsigned escolha, Jogo* jogo) {
     unsigned x = 1, y = 1, x_ant = 1, y_ant = 1;
     unsigned j = 0;
     if (escolha == 3) {
-        int sucesso = RetomaJogo(jogo);
-            if (sucesso == -2)
-                return;
-
-            j = sucesso;
+        RetomaJogo(jogo);
     }
 
     do {
@@ -173,16 +169,22 @@ MiniTabuleiro* MiniTabProxJogada(Tabuleiro* tabuleiro, unsigned* x, unsigned* y)
     }
 }
 
-int RetomaJogo(Jogo* jogo) {
-    FILE* savefile = fopen("jogo.bin", "wb");
+void RetomaJogo(Jogo* jogo) {
+    FILE* savefile = fopen("jogo.bin", "rb");
 
     if (!savefile) {
         printf("Erro: Erro ao carregar jogo!\n");
-        return -2;
+        exit(0);
     }
 
-    fread(&jogo, sizeof(Jogo), 1,savefile);
+    fread(&jogo->save_info, sizeof(SaveInfo), 1, savefile);
     fclose(savefile);
+
+    jogo->tabuleiro = jogo->save_info.tabuleiro;
+    for (int i = 0; i < 2; ++i) {
+        jogo->jogador[i] = jogo->save_info.jogadores[i];
+    }
+    jogo->jogada = jogo->save_info.jogada;
+
     printf("Sucesso: Jogo carregado!\n");
-    return 0;
 }
