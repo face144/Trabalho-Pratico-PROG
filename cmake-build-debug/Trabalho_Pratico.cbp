@@ -1,4 +1,4 @@
-z<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
@@ -8,117 +8,115 @@ z<?xml version="1.0" encoding="UTF-8"?>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug"/>
+				<Option working_dir="D:/Github/Trabalho-Pratico-Prog/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Trabalho_Pratico">
-				<Option output="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Trabalho_Pratico.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug"/>
+				<Option output="D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Trabalho_Pratico.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Github/Trabalho-Pratico-Prog/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/MinGW/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/i686-w64-mingw32/4.8.3/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/i686-w64-mingw32/4.8.3/include-fixed"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/i686-w64-mingw32/4.8.3/../../../../i686-w64-mingw32/include"/>
+					<Add directory="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 Trabalho_Pratico"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 Trabalho_Pratico"/>
+					<CompileFile command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Trabalho_Pratico/fast">
-				<Option output="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Trabalho_Pratico.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug"/>
+				<Option output="D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Trabalho_Pratico.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Github/Trabalho-Pratico-Prog/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/MinGW/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/i686-w64-mingw32/4.8.3/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/i686-w64-mingw32/4.8.3/include-fixed"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/i686-w64-mingw32/4.8.3/../../../../i686-w64-mingw32/include"/>
+					<Add directory="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 Trabalho_Pratico/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 Trabalho_Pratico/fast"/>
+					<CompileFile command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug"/>
+				<Option working_dir="D:/Github/Trabalho-Pratico-Prog/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug"/>
+				<Option working_dir="D:/Github/Trabalho-Pratico-Prog/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;D:/Github/Trabalho-Pratico-Prog/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Ficheiros/Savegame.c">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/Ficheiros/Savegame.c">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Ficheiros/Savegame.h">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/Ficheiros/Savegame.h">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogador/Jogador.c">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/Jogador/Jogador.c">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogador/Jogador.h">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/Jogador/Jogador.h">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogo/Jogo.c">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/Jogo/Jogo.c">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogo/Jogo.h">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/Jogo/Jogo.h">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniCasa.c">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/Tabuleiro/MiniCasa.c">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniCasa.h">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/Tabuleiro/MiniCasa.h">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniTabuleiro.c">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/Tabuleiro/MiniTabuleiro.c">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniTabuleiro.h">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/Tabuleiro/MiniTabuleiro.h">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/Tabuleiro.c">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/Tabuleiro/Tabuleiro.c">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/Tabuleiro.h">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/Tabuleiro/Tabuleiro.h">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/common.h">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/common.h">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/main.c">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/main.c">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
-		<Unit filename="C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/CMakeLists.txt">
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
