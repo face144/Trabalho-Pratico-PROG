@@ -26,6 +26,9 @@ void GuardarJogo(Jogo* jogo, unsigned j) {
 }
 
 void Menu() {
+    Jogo jogo;
+    jogo.has_played = FALSE; // init
+
     printf("--- TIC-TAC-TOE: Ultimate ---\n\n");
 
     printf("1 - Um jogador (P1 vs COM)\n");
@@ -37,25 +40,32 @@ void Menu() {
     do {
         printf("Escolha:");
         scanf("%d", &escolha);
-    } while (ValidaEscolhaMenu(escolha) == FALSE);
-    ProcecaEscolha(escolha);
+    } while (ValidaEscolhaMenu(escolha, &jogo) == FALSE);
+
+    ProcecaEscolha(escolha, &jogo);
 }
 
-int ValidaEscolhaMenu(unsigned escolha) {
-    if (escolha >= 1 && escolha <= 4)
-        return TRUE;
+int ValidaEscolhaMenu(unsigned escolha, Jogo* jogo) {
+    if (escolha >= 1 && escolha <= 4) {
+        if (escolha == 3 && jogo->has_played == FALSE) {
+            printf("Erro: Nenhum jogo guardado.\n");
+            return FALSE;
 
-    printf("Erro: Opcao invalida!\n");
-    return FALSE;
+        } else return TRUE;
+
+    } else {
+        printf("Erro: Opcao invalida!\n");
+        return FALSE;
+    }
 }
 
-void ProcecaEscolha(unsigned escolha) {
-    Jogo jogo;
+void ProcecaEscolha(unsigned escolha, Jogo* jogo) {
     if (escolha == 4) exit(0);
-    else SalaJogo(escolha, &jogo);
+    else SalaJogo(escolha, jogo);
 }
 
 void SalaJogo(unsigned escolha, Jogo* jogo) {
+    jogo->has_played = TRUE;
     unsigned bot = FALSE;
     if (escolha == 1) bot = TRUE; else if (escolha == 2) bot = FALSE;
     InicializaJogadores(jogo->jogador, bot);

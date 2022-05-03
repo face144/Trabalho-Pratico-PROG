@@ -10,7 +10,7 @@ typedef struct Jogada {
     unsigned x, y;
     MiniTabuleiro* mini_tabuleiro;
     Jogador* jogador;
-    //struct Jogada* prox; // Lista ligada? Fix deez nutz plz
+    struct Jogada* prox;
 
 } Jogada;
 
@@ -25,6 +25,7 @@ typedef struct Saveinfo {
 
 typedef struct Jogo {
 
+    unsigned has_played;
     Jogador jogador[2];
     Tabuleiro tabuleiro;
     Jogada jogada;
@@ -34,8 +35,8 @@ typedef struct Jogo {
 
 void GuardarJogo(Jogo* jogo, unsigned j);
 void Menu();
-int ValidaEscolhaMenu(unsigned escolha);
-void ProcecaEscolha(unsigned escolha);
+int ValidaEscolhaMenu(unsigned escolha, Jogo* jogo);
+void ProcecaEscolha(unsigned escolha, Jogo* jogo);
 void SalaJogo(unsigned escolha, Jogo* jogo);
 Jogada JogadaBOT(Jogo* jogo);
 unsigned Validacoes(Jogada* jogada);
