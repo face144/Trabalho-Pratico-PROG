@@ -10,25 +10,22 @@ typedef struct Jogada {
     unsigned x, y;
     MiniTabuleiro* mini_tabuleiro;
     Jogador* jogador;
-    //struct Jogada* prox; // Lista ligada? Fix deez nutz plz
-    // It's t minus 1 ohh ohh
+    struct Jogada* prox;
 
 } Jogada;
 
 typedef struct Saveinfo {
 
-    unsigned tam;
-    Jogada* jogada;
-    FILE* savefile;
+    unsigned prox_jogador;
+    Tabuleiro tabuleiro;
+    Jogador jogadores[2];
+    Jogada jogada;
 
 }SaveInfo;
 
-void InicializaSaveInfo(SaveInfo* save_info);
-void GuardarJogadas(SaveInfo* save_info);
-void AdicionaJogada(SaveInfo* save_info, Jogada* jogada);
-
 typedef struct Jogo {
 
+    unsigned has_played;
     Jogador jogador[2];
     Tabuleiro tabuleiro;
     Jogada jogada;
@@ -36,10 +33,11 @@ typedef struct Jogo {
 
 } Jogo;
 
+void GuardarJogo(Jogo* jogo, unsigned j);
 void Menu();
-int ValidaEscolhaMenu(unsigned escolha);
-void ProcecaEscolha(unsigned escolha);
-void SalaJogo(unsigned bot);
+int ValidaEscolhaMenu(unsigned escolha, Jogo* jogo);
+void ProcecaEscolha(unsigned escolha, Jogo* jogo);
+void SalaJogo(unsigned escolha, Jogo* jogo);
 Jogada JogadaBOT(Jogo* jogo);
 unsigned Validacoes(Jogada* jogada);
 unsigned ValidaCoordenadas(Jogada* jogada);
@@ -47,5 +45,7 @@ unsigned ValidaCasa(Jogada* jogada);
 void ModificaTabuleiro(Jogada* jogada);
 unsigned ValidaFimJogo(Jogo* jogo);
 MiniTabuleiro* MiniTabProxJogada(Tabuleiro* tabuleiro, unsigned* x, unsigned* y);
+void RetomaJogo(Jogo* jogo);
+
 
 #endif //TRABALHO_PRATICO_JOGO_H

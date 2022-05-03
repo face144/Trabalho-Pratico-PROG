@@ -5,7 +5,8 @@ void ResetMiniCasa(MiniCasa* mini_casa) {
 }
 
 void MostraMiniCasa(MiniCasa* mini_casa) {
-    switch (mini_casa->peca) {
+
+    switch (mini_casa->peca) { // Segmentation Fault
 
         case PECA_VAZIA:
             printf(STR_PECA_VAZIA);
@@ -18,5 +19,11 @@ void MostraMiniCasa(MiniCasa* mini_casa) {
         case PECA_P2:
             printf(STR_PECA_P2);
             break;
+
+        default:
+            printf("E");
+            break;
+
+
     }
 }

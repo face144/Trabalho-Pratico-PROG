@@ -4,26 +4,17 @@ set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
 
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Ficheiros/Savegame.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/Ficheiros/Savegame.c.obj"
-  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogador/Jogador.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.obj"
-  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Jogo/Jogo.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.obj"
-  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniCasa.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj"
-  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/MiniTabuleiro.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj"
-  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/Tabuleiro/Tabuleiro.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj"
-  "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/main.c" "C:/Users/jedua/Documents/ISEC-EI/1o_Ano/P/Trabalho-Pratico/cmake-build-debug/CMakeFiles/Trabalho_Pratico.dir/main.c.obj"
-  )
-set(CMAKE_C_COMPILER_ID "GNU")
-
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "D:/Github/Trabalho-Pratico-Prog/Ficheiros/Savegame.c" "CMakeFiles/Trabalho_Pratico.dir/Ficheiros/Savegame.c.obj" "gcc" "CMakeFiles/Trabalho_Pratico.dir/Ficheiros/Savegame.c.obj.d"
+  "D:/Github/Trabalho-Pratico-Prog/Jogador/Jogador.c" "CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.obj" "gcc" "CMakeFiles/Trabalho_Pratico.dir/Jogador/Jogador.c.obj.d"
+  "D:/Github/Trabalho-Pratico-Prog/Jogo/Jogo.c" "CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.obj" "gcc" "CMakeFiles/Trabalho_Pratico.dir/Jogo/Jogo.c.obj.d"
+  "D:/Github/Trabalho-Pratico-Prog/Tabuleiro/MiniCasa.c" "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj" "gcc" "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj.d"
+  "D:/Github/Trabalho-Pratico-Prog/Tabuleiro/MiniTabuleiro.c" "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj" "gcc" "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj.d"
+  "D:/Github/Trabalho-Pratico-Prog/Tabuleiro/Tabuleiro.c" "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj" "gcc" "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj.d"
+  "D:/Github/Trabalho-Pratico-Prog/main.c" "CMakeFiles/Trabalho_Pratico.dir/main.c.obj" "gcc" "CMakeFiles/Trabalho_Pratico.dir/main.c.obj.d"
   )
 
 # Targets to which this target links.
