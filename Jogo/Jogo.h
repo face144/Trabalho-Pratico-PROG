@@ -30,6 +30,7 @@ typedef struct Jogo {
     Tabuleiro tabuleiro;
     Jogada jogada;
     SaveInfo save_info;
+    Jogada ultima_jogada[MAX_JOGADAS]
 
 } Jogo;
 

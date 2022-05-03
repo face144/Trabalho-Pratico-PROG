@@ -97,15 +97,18 @@ void SalaJogo(unsigned escolha, Jogo* jogo) {
                 printf("Tabuleiro x%d y%d : Jogador %d ('x' 'y'): ", x_coord, y_coord, j);
                 scanf("%d %d",  &x, &y);
                 if (x == -1 && y == -1) {
-                    GuardarJogo(jogo, j); // Remover depois de testar
+                    GuardarJogo(jogo, j);
                     return;
                 }
+
+                // Todo: Listas ligadas aqui
 
                 jogo->jogada.jogador = &jogo->jogador[j - 1];
                 jogo->jogada.x = x;
                 jogo->jogada.y = y;
             }
         } while (Validacoes(&jogo->jogada) == FALSE);
+
         ModificaTabuleiro(&jogo->jogada);
         y_ant = y;
         x_ant = x;

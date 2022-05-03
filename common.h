@@ -16,5 +16,6 @@
 #define TRUE 1
 #define FALSE 0
 #define BOT_ID -1
+#define MAX_JOGADAS 10
 
 #endif //TRABALHO_PRATICO_COMMON_H
