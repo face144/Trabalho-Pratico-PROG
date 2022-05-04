@@ -1,5 +1,9 @@
 #include "Tabuleiro.h"
 
+void TabuleiroCompleto(Tabuleiro* tabuleiro) {
+
+}
+
 void ResetTabuleiro(Tabuleiro* tabuleiro) {
     tabuleiro->mini_tabuleiro = NULL;
     free(tabuleiro->mini_tabuleiro);

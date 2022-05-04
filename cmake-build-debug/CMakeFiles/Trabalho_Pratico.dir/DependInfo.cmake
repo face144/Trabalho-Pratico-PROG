@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Github/Trabalho-Pratico-Prog/Tabuleiro/MiniCasa.c" "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj" "gcc" "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniCasa.c.obj.d"
   "D:/Github/Trabalho-Pratico-Prog/Tabuleiro/MiniTabuleiro.c" "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj" "gcc" "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj.d"
   "D:/Github/Trabalho-Pratico-Prog/Tabuleiro/Tabuleiro.c" "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj" "gcc" "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj.d"
+  "D:/Github/Trabalho-Pratico-Prog/listaligada/listaligada.c" "CMakeFiles/Trabalho_Pratico.dir/listaligada/listaligada.c.obj" "gcc" "CMakeFiles/Trabalho_Pratico.dir/listaligada/listaligada.c.obj.d"
   "D:/Github/Trabalho-Pratico-Prog/main.c" "CMakeFiles/Trabalho_Pratico.dir/main.c.obj" "gcc" "CMakeFiles/Trabalho_Pratico.dir/main.c.obj.d"
   )
 

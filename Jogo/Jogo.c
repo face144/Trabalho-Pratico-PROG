@@ -1,5 +1,22 @@
 #include "Jogo.h"
 
+void ModoVisualisacao(Jogo* jogo) {
+    printf("Modo de visualisacao.\n");
+
+    unsigned jogadas = 0;
+    do {
+        printf("Insira o numero de jogadas que deseja retroceder (0 para cancelar): ");
+        scanf("%d", &jogadas);
+
+
+    } while (jogadas < 0 || jogadas > 10);
+
+    if (jogadas == 0)
+        return;
+
+    MostraJogadaAnterior(jogadas, jogo->ultimas_jogadas);
+}
+
 void GuardarJogo(Jogo* jogo, unsigned j) {
     if (j == 1)
         j = 2;
@@ -27,7 +44,6 @@ void GuardarJogo(Jogo* jogo, unsigned j) {
 
 void Menu() {
     Jogo jogo;
-    jogo.has_played = FALSE; // init
 
     printf("--- TIC-TAC-TOE: Ultimate ---\n\n");
 
@@ -47,11 +63,7 @@ void Menu() {
 
 int ValidaEscolhaMenu(unsigned escolha, Jogo* jogo) {
     if (escolha >= 1 && escolha <= 4) {
-        if (escolha == 3 && jogo->has_played == FALSE) {
-            printf("Erro: Nenhum jogo guardado.\n");
-            return FALSE;
-
-        } else return TRUE;
+        return TRUE;
 
     } else {
         printf("Erro: Opcao invalida!\n");
@@ -65,8 +77,10 @@ void ProcecaEscolha(unsigned escolha, Jogo* jogo) {
 }
 
 void SalaJogo(unsigned escolha, Jogo* jogo) {
-    jogo->has_played = TRUE;
+    jogo->ultimas_jogadas = NULL;
     unsigned bot = FALSE;
+
+
     if (escolha == 1) bot = TRUE; else if (escolha == 2) bot = FALSE;
     InicializaJogadores(jogo->jogador, bot);
     ResetTabuleiro(&jogo->tabuleiro);
@@ -96,12 +110,18 @@ void SalaJogo(unsigned escolha, Jogo* jogo) {
                 int y_coord = jogo->jogada.mini_tabuleiro->y_coord;
                 printf("Tabuleiro x%d y%d : Jogador %d ('x' 'y'): ", x_coord, y_coord, j);
                 scanf("%d %d",  &x, &y);
+
                 if (x == -1 && y == -1) {
                     GuardarJogo(jogo, j);
                     return;
+
+                } else if (x == -2 && y == -2) {
+                    ModoVisualisacao(jogo);
+                    j--;
                 }
 
                 // Todo: Listas ligadas aqui
+                AdicionaJogada(&jogo->ultimas_jogadas, jogo->tabuleiro);
 
                 jogo->jogada.jogador = &jogo->jogador[j - 1];
                 jogo->jogada.x = x;

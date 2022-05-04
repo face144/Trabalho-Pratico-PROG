@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/MiniTabuleiro.c.obj.d"
   "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj"
   "CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.obj.d"
+  "CMakeFiles/Trabalho_Pratico.dir/listaligada/listaligada.c.obj"
+  "CMakeFiles/Trabalho_Pratico.dir/listaligada/listaligada.c.obj.d"
   "CMakeFiles/Trabalho_Pratico.dir/main.c.obj"
   "CMakeFiles/Trabalho_Pratico.dir/main.c.obj.d"
   "Trabalho_Pratico.exe"

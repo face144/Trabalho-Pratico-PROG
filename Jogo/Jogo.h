@@ -2,6 +2,7 @@
 #define TRABALHO_PRATICO_JOGO_H
 #include "../Jogador/Jogador.h"
 #include "../Tabuleiro/Tabuleiro.h"
+#include "../listaligada/listaligada.h"
 #include "../common.h"
 #include <ctype.h>
 
@@ -14,6 +15,8 @@ typedef struct Jogada {
 
 } Jogada;
 
+
+
 typedef struct Saveinfo {
 
     unsigned prox_jogador;
@@ -25,12 +28,11 @@ typedef struct Saveinfo {
 
 typedef struct Jogo {
 
-    unsigned has_played;
     Jogador jogador[2];
     Tabuleiro tabuleiro;
     Jogada jogada;
     SaveInfo save_info;
-    Jogada ultima_jogada[MAX_JOGADAS]
+    Node* ultimas_jogadas;
 
 } Jogo;
 
@@ -47,6 +49,7 @@ void ModificaTabuleiro(Jogada* jogada);
 unsigned ValidaFimJogo(Jogo* jogo);
 MiniTabuleiro* MiniTabProxJogada(Tabuleiro* tabuleiro, unsigned* x, unsigned* y);
 void RetomaJogo(Jogo* jogo);
+void ModoVisualisacao(Jogo *jogo);
 
 
 #endif //TRABALHO_PRATICO_JOGO_H

@@ -272,6 +272,30 @@ Tabuleiro/Tabuleiro.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/Tabuleiro/Tabuleiro.c.s
 .PHONY : Tabuleiro/Tabuleiro.c.s
 
+listaligada/listaligada.obj: listaligada/listaligada.c.obj
+.PHONY : listaligada/listaligada.obj
+
+# target to build an object file
+listaligada/listaligada.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/listaligada/listaligada.c.obj
+.PHONY : listaligada/listaligada.c.obj
+
+listaligada/listaligada.i: listaligada/listaligada.c.i
+.PHONY : listaligada/listaligada.i
+
+# target to preprocess a source file
+listaligada/listaligada.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/listaligada/listaligada.c.i
+.PHONY : listaligada/listaligada.c.i
+
+listaligada/listaligada.s: listaligada/listaligada.c.s
+.PHONY : listaligada/listaligada.s
+
+# target to generate assembly for a file
+listaligada/listaligada.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trabalho_Pratico.dir\build.make CMakeFiles/Trabalho_Pratico.dir/listaligada/listaligada.c.s
+.PHONY : listaligada/listaligada.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -323,6 +347,9 @@ help:
 	@echo ... Tabuleiro/Tabuleiro.obj
 	@echo ... Tabuleiro/Tabuleiro.i
 	@echo ... Tabuleiro/Tabuleiro.s
+	@echo ... listaligada/listaligada.obj
+	@echo ... listaligada/listaligada.i
+	@echo ... listaligada/listaligada.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

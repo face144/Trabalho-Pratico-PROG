@@ -113,6 +113,12 @@
 		<Unit filename="D:/Github/Trabalho-Pratico-Prog/common.h">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/listaligada/listaligada.c">
+			<Option target="Trabalho_Pratico"/>
+		</Unit>
+		<Unit filename="D:/Github/Trabalho-Pratico-Prog/listaligada/listaligada.h">
+			<Option target="Trabalho_Pratico"/>
+		</Unit>
 		<Unit filename="D:/Github/Trabalho-Pratico-Prog/main.c">
 			<Option target="Trabalho_Pratico"/>
 		</Unit>
