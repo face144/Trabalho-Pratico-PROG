@@ -1,4 +1,4 @@
-# Trabalho-Pratico-Prog (Tic-Tac-Toe: Ultimate)
+# Trabalho-Pratico-PROG (Tic-Tac-Toe: Ultimate)
  (ISEC) Trabalho-Prático de Programação 2021/22. <br> 
  Este repositório contém 2 ramos. O "stable" é onde estão as coisas que funcionam e o "development" é onde estão as coisas em progresso. 
  
